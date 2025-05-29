@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './components/homePage'
 import AboutPage from './components/aboutPage'
 import ContactPage from './components/contactPage'
+import Projects from './components/projectsPage'
 import './App.css'
 import NavBar from './components/NavBar'
+import ProjectsPage from './components/projectsPage'
+import type { RouteProps } from './Interface'
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,51 +21,43 @@ function App() {
   const [toggle, setToggle] = useState<boolean>(false)
   //the <boolean> is declaring what type toggle is
 
+  const routes: RouteProps[] = [
+    {
+      name: "Home",
+      path: "/",
+      element: <HomePage/>
+    },
+    {
+      name: "About",
+      path: "/about",
+      element: <AboutPage/>
+    },
+    {
+      name: "Projects",
+      path: "/projects",
+      element: <ProjectsPage/>
+    },
+    {
+      name: "Contact",
+      path: "/contact",
+      element: <ContactPage/>
+    },
+  ]
+
   return (
     <>
       <BrowserRouter>
-        <div>
-          navbar
-        </div>
-        <NavBar></NavBar>
+        <NavBar routes={routes} />
         <div className="content">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          {
+            routes.map((route) => (
+              <Route path={route.path} element={route.element} />
+            ))
+          }
         </Routes>
         </div>
-
-
       </BrowserRouter>
-
-
-
-      {/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() =>{
-          setCount((count) => count + 1)
-          setToggle(!toggle)
-        }
-        } >
-          count is {count}
-        </button>
-        <h1 style={{visibility:toggle ? "visible":"hidden"}}>zach is cool</h1>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
     </>
   )
 }

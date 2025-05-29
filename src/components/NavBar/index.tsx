@@ -1,42 +1,32 @@
 import { NavLink } from "react-router-dom"
+import { Navbar, Container, Nav } from "react-bootstrap";
 import './style.css'
+import type { RouteProps } from '../../Interface'
 
 
+interface NavBarProps{
+  routes: RouteProps[]
+}
 
-function Navbar() {
+
+function NavBar(props: NavBarProps) {
   return (
-    <nav className="navbar">
-      <div className="navbar-links">
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
-          //basically saying If this is the active ling, assign the class name to nav-link and active, OTHERWISE only do nav-link
-          //Class names are referenced in the styling sheet
-          }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
-          }
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            isActive ? 'nav-link active' : 'nav-link'
-          }
-        >
-          Contact
-        </NavLink>
-      </div>
-    </nav>
+    <Navbar bg="dark" data-bs-theme="dark" fixed="top" expand="sm">
+        <Container fluid>
+          <Navbar.Brand href="/">Navbar</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              {
+                props.routes.map((route) =>(
+                  <Nav.Link href={route.path}>{route.name}</Nav.Link>
+                ))
+              }
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavBar;
