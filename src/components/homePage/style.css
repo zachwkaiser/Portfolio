@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+
+.hero-section{
+    margin-top: 65px;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.title{
+    font-size: 1.2rem;
+    color: #b4b2b2;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.studentText{
+    font-size: 1.75rem;
+    color: #b4b2b2;
+    font-weight: 100;
+}
+
+.summary{
+    margin-top: 30px;
+    font-size: 1rem;
+    text-align: left;
+    max-width: 500px;
+    color: #b4b2b2;
+}
+.name{
+    font-family: 'Turret Road';
+    font-size: 5rem;
+    font-weight: bold;
+    color: #b4b2b2;
+}
+
+.headshot {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+    margin-right: -2rem;
+    margin-left: 10rem;
+}
+
+.headshot-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;    
+    border-radius: 50%;      
+    border: 4px solid #bbbac7;
+    margin: 0;
+}
+
+/* Add a wrapper for the text content */
+.hero-content {
+    max-width: 600px;
+    margin-left: -2rem;
+}
+
+.contact{
+    margin: 0;
+    color: #b4b2b2;
+    border-color: #b4b2b2;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.contact:hover {
+    transform: translateX(-5px);
+    background-color: rgba(187, 186, 199, 0.1);
+}
+
+.contact svg {
+    color: #b4b2b2;
+}
+
+/* Update button styles for better visibility on dark background */
+.contact-button, .projects-button {
+    border-color: #b4b2b2 !important;
+    color: #b4b2b2 !important;
+}
+
+.contact-button:hover, .projects-button:hover {
+    background-color: #b4b2b2 !important;
+    color: #00010b !important;
+}
+
+.contact-button a, .projects-button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0.5rem;
+    top: 50%;
+    
+    transform: translateY(-50%);
+    gap: 1.5rem;
+    z-index: 100;
+}
+
+body {
+    background: linear-gradient(45deg, #00010b 0%, #103875 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add this to ensure text remains readable on dark background */
+.title, .name, .studentText, .summary {
+    color: #b4b2b2;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.contact-col, .projects-col {
+    margin: 0 1rem;
+}
