@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './components/homePage'
 import AboutPage from './components/aboutPage'
@@ -7,47 +7,43 @@ import './App.css'
 import NavBar from './components/NavBar'
 import ProjectsPage from './components/projectsPage'
 import type { RouteProps } from './Interface'
+import { Link as ScrollLink, Element } from 'react-scroll';
 
 
 
 function App() {
+
   const routes: RouteProps[] = [
     {
       name: "Home",
-      path: "/",
       element: <HomePage/>
     },
     {
       name: "About",
-      path: "/about",
       element: <AboutPage/>
     },
     {
       name: "Projects",
-      path: "/projects",
       element: <ProjectsPage/>
     },
     {
       name: "Contact",
-      path: "/contact",
       element: <ContactPage/>
     },
   ]
 
   return (
     <>
-      <BrowserRouter>
-        <NavBar routes={routes} />
-        <div className="content">
-        <Routes>
-          {
-            routes.map((route) => (
-              <Route path={route.path} element={route.element} />
-            ))
-          }
-        </Routes>
-        </div>
-      </BrowserRouter>
+      <NavBar routes={routes} />
+      <div className="content">
+      {
+        routes.map((route) => (
+          <Element name={route.name} id={route.name.toLowerCase()}>
+            {route.element}
+          </Element>
+        ))
+      }
+      </div>
     </>
   )
 }

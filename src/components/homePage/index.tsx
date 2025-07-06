@@ -1,11 +1,13 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import './style.css'
 import { useEffect, useRef } from "react";
 import { Linkedin, Github, Envelope } from 'react-bootstrap-icons';
 import { motion, scale } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faGears } from '@fortawesome/free-solid-svg-icons';
 import headshot from '../../images/headshot.JPG'
 import { animate } from 'animejs';
+import { Link as ScrollLink, Element } from 'react-scroll';
 
 
 function HomePage(){
@@ -47,7 +49,7 @@ function HomePage(){
     
     return(
         <div>
-            <Container className="hero-section">
+            <Container className="hero-section" style={{height: '100vh', width: '100vw'}}>
                 <div className="content-wrapper">
                     <div className="hero-content">
                         <motion.div
@@ -71,16 +73,22 @@ function HomePage(){
                             <Row className="button-section">
                                 <Col className="contact-col" xs="auto">
                                     <motion.div whileHover={{scale: 1.1}}>
+                                        <ScrollLink to="Contact" smooth spy duration={500}>
                                         <Button className="contact-button" variant="outline-primary">
-                                            <Link to='/contact'>Contact me</Link>
+                                            <FontAwesomeIcon icon={faGears} /> Contact me
                                         </Button>
+                                        </ScrollLink>
                                     </motion.div>
                                 </Col>
+
+
                                 <Col className="projects-col" xs="auto">
                                     <motion.div whileHover={{scale: 1.1}}>
-                                        <Button className="projects-button" variant="outline-primary">
-                                            <Link to='/projects'>View my work</Link>
+                                        <ScrollLink to="Projects" smooth spy duration={500}>
+                                            <Button className="projects-button" variant="outline-primary">
+                                            <FontAwesomeIcon icon={faCode} /> View my work
                                         </Button>
+                                        </ScrollLink>
                                     </motion.div>
                                 </Col>
                             </Row>
@@ -136,6 +144,10 @@ function HomePage(){
                     <img src={headshot} alt="My Headshot" className="headshot-img"/>
                 </motion.div>
             </Container>
+            {/* Blue divider at the bottom of home page */}
+            <div className="home-divider">
+                <div className="divider-line"></div>
+            </div>
         </div>
     );
 }

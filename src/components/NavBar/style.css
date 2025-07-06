@@ -1,3 +1,42 @@
-Nav.Link{
-    margin: 5rem;
+.navbar{
+  margin-bottom: 0;
+  background: linear-gradient(90deg, rgba(0, 1, 11, 0.9) 0%, rgba(15, 47, 94, 0.8) 100%) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(74, 179, 232, 0.15);
+}
+
+.custom-nav .nav-link {
+  margin-right: 3rem;
+  color: #b4b2b2 !important;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.custom-nav .nav-link:hover{
+  color: #4ab3e8 !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  transition: color 0.2s, transform 0.2s;
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Style for active nav link */
+.custom-nav .active {
+  color: #4ab3e8 !important;
+  font-weight: 500;
+}
+
+/* Center the navbar elements */
+.custom-nav {
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .custom-nav .nav-link {
+    margin-right: 1rem;
+  }
 }

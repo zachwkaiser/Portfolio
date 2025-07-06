@@ -1,6 +1,6 @@
 function ContactPage(){
     return(
-        <div>
+        <div style={{height: '100vh', width: '100vw'}}>
             This is the contact page
         </div>
     )

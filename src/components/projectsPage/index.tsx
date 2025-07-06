@@ -1,6 +1,6 @@
 function ProjectsPage(){
     return(
-        <div>
+        <div style={{height: '100vh', width: '100vw'}}>
             This is the ProjectsPage
         </div>
     )
