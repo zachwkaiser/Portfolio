@@ -1,5 +1,5 @@
 import { motion, scale } from 'framer-motion';
-import { Button, Container, Row, Col, Modal } from "react-bootstrap";
+import { Button, Container, Row, Col, Modal, Overlay, Tooltip, OverlayTrigger } from "react-bootstrap";
 import {
     PythonOriginal,
     JavaOriginal,
@@ -23,6 +23,12 @@ function AboutPage(){
         "TypeScript": <TypescriptOriginal size="3em"/>,
         "React": <ReactOriginal size="3em"/>
     };
+
+    // const renderTooltip = (props: string) =>{
+    //     <Tooltip id='icon-tooltip' {...props}>
+    //         {...props}
+    //     </Tooltip>
+    // }
     
     const [showModal, setShowModal] = useState(false);
     const handleClose = () => setShowModal(false);
@@ -31,7 +37,7 @@ function AboutPage(){
     return(
         <>
         <motion.div className='about-summary'>
-            <h1>About me</h1>
+            <h1>About Me</h1>
             <p>Current full-time software engineering student at the University of North Carolina Wilmington. I am seeking a internship where I can apply my knowledge and passion for desiging software!</p>
         </motion.div>
 
@@ -103,9 +109,14 @@ function AboutPage(){
                             whileHover={{ scale: 1.05 }}
                             transition={{ delay: 0.1, duration: 0.2, ease: "easeInOut" }}
                         >
-                            <div className="tech-icon-title">{key}</div>
                             <div className="tech-icon">
-                                {Technologies[key]}
+                                {/* <OverlayTrigger
+                                    placement='top'
+                                    delay={{ show: 250, hide: 400 }}
+                                    overlay={renderTooltip}
+                                >
+                                    {Technologies[key]}
+                                </OverlayTrigger> */}
                             </div>
                         </motion.div>
                     ))}
