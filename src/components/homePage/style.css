@@ -85,7 +85,8 @@
     align-items: flex-start;
     gap: 2rem;
     position: relative;
-    margin-left: 150px;  /* Add margin to move content right, making space for socials */
+    margin-left: 300px;  /* Increased margin to move content further right */
+    max-width: calc(100vw - 200px);
 }
 
 .social-container{
@@ -169,4 +170,8 @@ body {
     background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(74, 179, 232, 0.3);
+}
+
+.headshot{
+    margin-right: 100px;  /* Move headshot to the right */
 }
