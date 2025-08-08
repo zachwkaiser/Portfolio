@@ -10,6 +10,7 @@
   margin-right: 3rem;
   color: #b4b2b2 !important;
   transition: color 0.2s, transform 0.2s;
+  font-weight: 350;
 }
 
 .custom-nav .nav-link:hover{
@@ -26,7 +27,11 @@
 /* Style for active nav link */
 .custom-nav .active {
   color: #4ab3e8 !important;
-  font-weight: 500;
+  background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 350;
 }
 
 /* Center the navbar elements */

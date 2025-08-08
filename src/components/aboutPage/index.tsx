@@ -1,5 +1,5 @@
-import { motion, scale } from 'framer-motion';
-import { Button, Container, Row, Col, Modal, Overlay, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { motion } from 'framer-motion';
+import { Button, Container, Modal } from "react-bootstrap";
 import {
     PythonOriginal,
     JavaOriginal,
@@ -24,14 +24,7 @@ function AboutPage(){
         "React": <ReactOriginal size="3em"/>
     };
 
-    // const renderTooltip = (props: string) =>{
-    //     <Tooltip id='icon-tooltip' {...props}>
-    //         {...props}
-    //     </Tooltip>
-    // }
-    const [showAbout, setShowAbout] = useState(false);
-    const handleOpenAbout = () => setShowAbout(true);
-    const handleCloseAbout = () => setShowAbout(false);
+    // Removed unused About modal state
 
     const [showModal, setShowModal] = useState(false);
     const handleClose = () => setShowModal(false);

@@ -1,5 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import HomePage from './components/homePage'
 import AboutPage from './components/aboutPage'
 import ContactPage from './components/contactPage'
@@ -7,11 +6,21 @@ import './App.css'
 import NavBar from './components/NavBar'
 import ProjectsPage from './components/projectsPage'
 import type { RouteProps } from './Interface'
-import { Link as ScrollLink, Element } from 'react-scroll';
+import { Element } from 'react-scroll';
+import zkImage from './images/4C36770A-20B5-4FC1-89E1-806C90ACCFBE.png'
 
 
 
 function App() {
+
+  useEffect(() => {
+      // Set the favicon to the ZK image
+      const link = (document.querySelector("link[rel*='icon']") || document.createElement('link')) as HTMLLinkElement;
+      link.type = 'image/png';
+      link.rel = 'icon';
+      link.href = zkImage;
+      document.getElementsByTagName('head')[0].appendChild(link);
+  });
 
   const routes: RouteProps[] = [
     {

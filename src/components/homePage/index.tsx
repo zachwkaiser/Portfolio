@@ -2,12 +2,12 @@ import { Button, Container, Row, Col } from "react-bootstrap";
 import './style.css'
 import { useEffect, useRef } from "react";
 import { Linkedin, Github, Envelope } from 'react-bootstrap-icons';
-import { motion, scale } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faGears } from '@fortawesome/free-solid-svg-icons';
 import headshot from '../../images/headshot.JPG'
 import { animate } from 'animejs';
-import { Link as ScrollLink, Element } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 function HomePage(){

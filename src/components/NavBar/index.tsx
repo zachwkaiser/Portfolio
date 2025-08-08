@@ -1,8 +1,6 @@
-import { NavLink } from "react-router-dom"
 import { Navbar, Container, Nav } from "react-bootstrap";
 import './style.css'
 import type { RouteProps } from '../../Interface'
-import { motion, scale } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
 
 interface NavBarProps{
@@ -19,10 +17,16 @@ function NavBar(props: NavBarProps) {
             <Nav className="mx-auto custom-nav">
               {
                 props.routes.map((route) =>(
-                  <Nav.Link>
-                    <ScrollLink to={route.name} spy={true} duration={300} activeClass="active" offset={-80}>
-                      {route.name}
-                    </ScrollLink>
+                  <Nav.Link
+                    key={route.name}
+                    as={ScrollLink}
+                    to={route.name}
+                    spy={true}
+                    duration={300}
+                    activeClass="active"
+                    offset={-80}
+                  >
+                    {route.name}
                   </Nav.Link>
                 ))
               }
