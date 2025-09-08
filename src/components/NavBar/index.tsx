@@ -5,6 +5,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 interface NavBarProps{
   routes: RouteProps[]
+  offset?: number
 }
 
 
@@ -24,7 +25,7 @@ function NavBar(props: NavBarProps) {
                     spy={true}
                     duration={300}
                     activeClass="active"
-                    offset={-80}
+                    offset={props.offset ?? -80}
                   >
                     {route.name}
                   </Nav.Link>

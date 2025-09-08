@@ -48,58 +48,15 @@ function HomePage(){
     
     
     return(
-        <div>
-            <Container className="hero-section" style={{height: '100vh', width: '100vw'}}>
-                <div className="content-wrapper">
-                    <div className="hero-content">
-                        <motion.div
-                            initial={{ opacity: 0, y: -50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.95 }}
-                        >
-                            <h2 className="title">Hi. My name is,</h2>
-                            <h1 className="name" ref={nameRef}>Zach Kaiser</h1>
-                            <h3 className="studentText">Software Engineering Student</h3>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <p className="summary">
-                                Motivated Software Engineering student with a passion for designing software solutions. 
-                                Looking to learn new skills every day!
-                            </p>
-                            <Row className="button-section">
-                                <Col className="contact-col" xs="auto">
-                                    <motion.div whileHover={{scale: 1.1}}>
-                                        <ScrollLink to="Contact" smooth spy duration={500}>
-                                        <Button className="contact-button" variant="outline-primary">
-                                            <FontAwesomeIcon icon={faGears} /> Contact me
-                                        </Button>
-                                        </ScrollLink>
-                                    </motion.div>
-                                </Col>
-
-
-                                <Col className="projects-col" xs="auto">
-                                    <motion.div whileHover={{scale: 1.1}}>
-                                        <ScrollLink to="Projects" smooth spy duration={500}>
-                                            <Button className="projects-button" variant="outline-primary">
-                                            <FontAwesomeIcon icon={faCode} /> View my work
-                                        </Button>
-                                        </ScrollLink>
-                                    </motion.div>
-                                </Col>
-                            </Row>
-                        </motion.div>
-                    </div>
-                    <div className="socials">
+        <div style={{minHeight: '100vh', display: 'flex', flexDirection: 'column'}}>
+            <Container fluid className="hero-section">
+                <Row>
+                    <Col xs={{ span: 12, order: 3 }} md={{ span: 1, order: 1 }} className="socials">
                         <motion.div 
-                        variants={containerVariants} 
-                        initial="hidden" 
-                        animate="visible"
-                        className="social-container"
+                            variants={containerVariants} 
+                            initial="hidden" 
+                            animate="visible"
+                            className="social-container d-flex flex-row flex-md-column align-items-center gap-3"
                         >
                             <motion.a 
                                 href="mailto:zachwkaiser@gmail.com"
@@ -133,19 +90,58 @@ function HomePage(){
                                 <Github color="white" size={40} />
                             </motion.a>
                         </motion.div>
-                    </div>
-                </div>
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: .75 }}
-                    className="headshot"
-                >
-                    <img src={headshot} alt="My Headshot" className="headshot-img"/>
-                </motion.div>
+                    </Col>
+                    <Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 2 }} className="hero-content">
+                        <motion.div
+                            initial={{ opacity: 0, y: -50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.95 }}
+                        >
+                            <h2 className="title ms-3 mb-3">Hi. My name is,</h2>
+                            <h1 className="name" ref={nameRef}>Zach Kaiser</h1>
+                            <h3 className="studentText">Software Engineering Student</h3>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <p className="summary">
+                                Motivated Software Engineering student with a passion for designing software solutions. 
+                                Looking to learn new skills every day!
+                            </p>
+                            <div className="button-section d-flex justify-content-center gap-3 flex-wrap">
+                                <motion.div whileHover={{scale: 1.1}}>
+                                    <ScrollLink to="Contact" smooth spy duration={500}>
+                                        <Button className="contact-button" variant="outline-primary">
+                                            <FontAwesomeIcon icon={faGears} /> Contact me
+                                        </Button>
+                                    </ScrollLink>
+                                </motion.div>
+                                <motion.div whileHover={{scale: 1.1}}>
+                                    <ScrollLink to="Projects" smooth spy duration={500}>
+                                        <Button className="projects-button" variant="outline-primary">
+                                            <FontAwesomeIcon icon={faCode} /> View my work
+                                        </Button>
+                                    </ScrollLink>
+                                </motion.div>
+                            </div>
+                        </motion.div>
+                    </Col>
+                    <Col xs={{ span: 12, order: 2 }} md={{ span: 4, order: 3 }} lg={{ span: 5, order: 3 }}>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: .75 }}
+                            className="headshot"
+                        >
+                            <img src={headshot} alt="My Headshot" className="headshot-img"/>
+                        </motion.div>
+                    </Col>
+                </Row>
             </Container>
             {/* Blue divider at the bottom of home page */}
-            <div className="home-divider">
+            <div className="home-divider" style={{marginTop: 'auto'}}>
                 <div className="divider-line"></div>
             </div>
         </div>

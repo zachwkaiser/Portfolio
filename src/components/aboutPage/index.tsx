@@ -191,7 +191,7 @@ function AboutPage(){
                 </div>
                 <div className='school-card'>
                     <h2>Junior Year</h2>
-                    <p></p>
+                    <p>Currently in my junior year, I am expaning upon the skills I have learned in the past two years, and learning new skills to help me in my future career.</p>
                     <Button className='school-button' onClick={handleOpen3}>
                         Learn More
                     </Button>
@@ -209,14 +209,28 @@ function AboutPage(){
 
                                     <p className='modal-text'>Currently in my junior year, I am expaning upon the skills I have learned in the past two years, in the following courses:</p>
 
-                                    <h2>Fall 2025</h2>
+                                    <h2>Fall 2025 - In Progress</h2>
 
                                     <h3>💻 SENG 401 – Software Construction</h3>
                                     <h4>Learning Objectives</h4>
                                     <ul>
                                         <li className='modal-text'>Work on a semester long team project, applying the skills I have learned into one product.</li>
+                                            <ul>
+                                                <li className='modal-text'>Team of 5 people, each responsible for a different part of the project.</li>
+                                                <li className='modal-text'>Using Raspberry Pi's to emit WiFi signals to devices in the room. Using the WiFi signals, generate a heat map of locations of people on a given floormap.</li>
+                                            </ul>
                                         <li className='modal-text'>Design and implement a cloud-based software system.</li>
                                     </ul>
+
+                                    <h3>💻 SENG 465 – Server-Side Web Development</h3>
+                                    <h4>Learning Objectives</h4>
+                                    <ul>
+                                        <li className='modal-text'>Using PHP to build server-side web applications.</li>
+                                        <li className='modal-text'>Learn to use SQL to store data.</li>
+                                        <li className='modal-text'>Understanding form processing, and using API's to interact with the server.</li>
+                                    </ul>
+
+                                    <h2>Spring 2026 Classes Coming Soon!</h2>
                                 </section>
                             </Modal.Body>
                         </Modal.Dialog>

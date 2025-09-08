@@ -6,6 +6,16 @@
   overflow-x: hidden;
 }
 
+/* Ensure content starts exactly below the fixed navbar and anchors align */
+.content {
+  padding-top: var(--navbar-h, 0px);
+}
+
+/* Native scroll-to behavior accounts for the navbar height */
+.content > [id] {
+  scroll-margin-top: var(--navbar-h, 0px);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

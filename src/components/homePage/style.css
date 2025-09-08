@@ -1,17 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-
-
 .hero-section{
-    margin-top: 0;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
+    min-height: calc(100vh - var(--navbar-h, 0px));
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 5rem;
-    margin-top: -40px;
+    justify-content: center;
+    margin-left: 2rem;
+    max-width: none;
+}
+
+.headshot-img{
+    margin-top: -2rem;
+    max-height: 350px;
+    max-width: 350px;
+    border-radius: 50%;
+    border: 30px solid linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+}
+
+body {
+    background: linear-gradient(90deg, #00010b 0%, #0f2f5e 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.name{
+    font-family: 'Turret Road';
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: bold;
+    background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 .title{
@@ -21,9 +42,6 @@
     font-style: italic;
     letter-spacing: 0.5px;
     text-align: left;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    padding-left: 0;
 }
 
 .studentText{
@@ -33,60 +51,12 @@
 }
 
 .summary{
-    margin-top: 30px;
-    font-size: 1rem;
-    text-align: left;
-    max-width: 500px;
+    font-size: 1.25rem;
     color: #b4b2b2;
-}
-.name{
-    font-family: 'Turret Road';
-    font-size: 5rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-}
-
-.headshot {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 0;
-    margin-right: -2rem;
-    margin-left: 10rem;
-}
-
-.headshot-img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;    
-    border-radius: 50%;      
-    border: 4px solid #bbbac7;
-    margin: 0;
-}
-
-/* Add a wrapper for the text content */
-.hero-content {
+    font-weight: 300;
+    margin: 0 auto;
     max-width: 600px;
-    margin-left: -2rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-/* Add a container for the content and socials */
-.content-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2rem;
-    position: relative;
-    margin-left: 300px;  /* Increased margin to move content further right */
-    max-width: calc(100vw - 200px);
+    margin-bottom: 2rem;
 }
 
 .social-container{
@@ -96,7 +66,6 @@
 }
 
 .contact{
-    margin: 0;
     color: #b4b2b2;
     border-color: #b4b2b2;
     width: 45px;
@@ -107,7 +76,7 @@
     justify-content: center;
 }
 
-/* Update button styles for better visibility on dark background */
+
 .contact-button, .projects-button {
     border-color: #b4b2b2 !important;
     color: #b4b2b2 !important;
@@ -124,23 +93,33 @@
 }
 
 .socials {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: -250px;  /* Move further left beyond the hero content */
-    top: 50%;      /* Maintain vertical center position */
-    transform: translateY(-50%);  /* Keep vertical centering */
+    position: static;
     gap: 1.5rem;
+    align-items: center;
 }
 
-body {
-    background: linear-gradient(90deg, #00010b 0%, #0f2f5e 100%);
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+.divider-line {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(74, 179, 232, 0.3);
 }
 
-/* Add this to ensure text remains readable on dark background */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -2rem;
+}
+
+/* @media (min-width: 992px) {
+    .hero-content { max-width: 700px; }
+} */
+
 .title, .name, .studentText, .summary {
     color: #b4b2b2;
 }
@@ -156,7 +135,6 @@ body {
     margin: 0 1rem;
 }
 
-/* Blue divider at the bottom of home page */
 .home-divider {
     width: 100%;
     display: flex;
@@ -164,14 +142,50 @@ body {
     padding: 2rem 0;
 }
 
-.divider-line {
-    width: 200px;
-    height: 3px;
-    background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(74, 179, 232, 0.3);
-}
+
 
 .headshot{
-    margin-right: 100px;  /* Move headshot to the right */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        height: auto !important;
+        padding: calc(56px + 1rem) 1rem 2rem 1rem;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .socials {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-container {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .headshot {
+        margin: 2rem auto 0 auto;
+        justify-content: center;
+    }
+
+    .headshot-img {
+        width: 70%;
+        max-width: 260px;
+        height: auto;
+    }
 }
