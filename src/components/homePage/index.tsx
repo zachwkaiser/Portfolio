@@ -128,7 +128,7 @@ function HomePage(){
                             </div>
                         </motion.div>
                     </Col>
-                    <Col xs={{ span: 12, order: 2 }} md={{ span: 4, order: 3 }} lg={{ span: 5, order: 3 }}>
+                    <Col xs={{ span: 12, order: 2 }} md={{ span: 5, order: 3 }}>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
