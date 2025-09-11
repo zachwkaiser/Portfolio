@@ -1,4 +1,4 @@
-import { Button, Col, Modal} from "react-bootstrap";
+import { Button, Modal} from "react-bootstrap";
 import { useState } from "react";   
 import './style.css';
 

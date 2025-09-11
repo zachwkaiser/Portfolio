@@ -20,6 +20,7 @@
   transition: color 0.2s, transform 0.2s;
   transform: scale(1.08);
   background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -28,6 +29,7 @@
 .custom-nav .active {
   color: #4ab3e8 !important;
   background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
