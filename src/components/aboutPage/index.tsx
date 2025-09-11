@@ -238,6 +238,11 @@ function AboutPage(){
                 </div>
             </Container>
         </div>
+        
+        {/* Blue divider at the bottom of about page */}
+        <div className="home-divider" style={{marginTop: 'auto'}}>
+            <div className="divider-line"></div>
+        </div>
         </>
     )
 }

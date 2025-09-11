@@ -135,6 +135,11 @@ function ProjectsPage(){
                 </Row>
             </Container>
         </div>
+        
+        {/* Blue divider at the bottom of projects page */}
+        <div className="home-divider" style={{marginTop: 'auto'}}>
+            <div className="divider-line"></div>
+        </div>
         </>
     )
 }

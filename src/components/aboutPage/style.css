@@ -384,3 +384,19 @@
     box-shadow: 0 12px 35px rgba(74, 179, 232, 0.5);
     background: linear-gradient(90deg, #0072ff 0%, #4ab3e8 100%) !important;
 }
+
+/* Divider styles */
+.divider-line {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(74, 179, 232, 0.3);
+}
+
+.home-divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}

@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .projects-hero {
-    min-height: 50vh;
+    min-height: 30vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -16,7 +16,7 @@
 }
 
 .projects-summary {
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 1rem 4rem;
     text-align: center;
     max-width: 600px;
@@ -48,7 +48,7 @@
 
 /* Projects Section */
 .projects-section {
-    padding: 2rem 0;
+    padding: 1rem 0;
     position: relative;
 }
 
@@ -316,4 +316,20 @@
 .custom-modal ul ul li {
     color: #b4b2b2 !important;
     font-size: 0.95rem;
+}
+
+/* Divider styles */
+.divider-line {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, #c7eff9 0%, #4ab3e8 100%);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(74, 179, 232, 0.3);
+}
+
+.home-divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
 }

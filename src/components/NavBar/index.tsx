@@ -2,6 +2,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import './style.css'
 import type { RouteProps } from '../../Interface'
 import { Link as ScrollLink } from 'react-scroll';
+import Resume from '../resume';
 
 interface NavBarProps{
   routes: RouteProps[]
@@ -31,6 +32,7 @@ function NavBar(props: NavBarProps) {
                   </Nav.Link>
                 ))
               }
+              <Resume />
             </Nav>
           </Navbar.Collapse>
         </Container>
