@@ -44,8 +44,7 @@ function AboutPage(){
         <div className="about-hero">
             <motion.div className='about-summary'>
                 <h1>About Me</h1>
-                <p>Current full-time software engineering student at the University of North Carolina Wilmington. I am seeking a internship where I can apply my knowledge and passion for desiging software!</p>
-            </motion.div>
+                <p>Current full-time software engineering student at the University of North Carolina Wilmington. I am seeking an internship where I can apply my knowledge and passion for designing software!</p>            </motion.div>
             
             <Container className="skillset-section">
                 <div className="skills-header">
@@ -131,8 +130,7 @@ function AboutPage(){
                 </div>
                 <div className='school-card'>
                     <h2>Sophomore Year</h2>
-                    <p>Went more in depth with programming, and learned how to use an object oriented approach through Java. Learned the importance of testing code, and how software layout planning works.</p>
-                    <Button className='school-button' onClick={handleOpen2}>
+                    <p>Went more in-depth with programming and learned how to use an object-oriented approach through Java. Learned the importance of testing code and how software layout planning works.</p>                    <Button className='school-button' onClick={handleOpen2}>
                         Learn More
                     </Button>
 
@@ -191,8 +189,7 @@ function AboutPage(){
                 </div>
                 <div className='school-card'>
                     <h2>Junior Year</h2>
-                    <p>Currently in my junior year, I am expaning upon the skills I have learned in the past two years, and learning new skills to help me in my future career.</p>
-                    <Button className='school-button' onClick={handleOpen3}>
+                    <p>Currently in my junior year, I am expanding upon the skills I have learned in the past two years and learning new skills to help me in my future career.</p>                    <Button className='school-button' onClick={handleOpen3}>
                         Learn More
                     </Button>
 
@@ -207,17 +204,17 @@ function AboutPage(){
                                 <section className='modal-text'>
                                     <h2>Third-Year Software Engineering Growth at UNCW</h2>
 
-                                    <p className='modal-text'>Currently in my junior year, I am expaning upon the skills I have learned in the past two years, in the following courses:</p>
+                                    <p className='modal-text'>Currently in my junior year, I am expanding upon the skills I have learned in the past two years, in the following courses:</p>
 
                                     <h2>Fall 2025 - In Progress</h2>
 
                                     <h3>💻 SENG 401 – Software Construction</h3>
                                     <h4>Learning Objectives</h4>
                                     <ul>
-                                        <li className='modal-text'>Work on a semester long team project, applying the skills I have learned into one product.</li>
+                                        <li className='modal-text'>Work on a semester-long team project, applying the skills I have learned to one product.</li>                                            
                                             <ul>
                                                 <li className='modal-text'>Team of 5 people, each responsible for a different part of the project.</li>
-                                                <li className='modal-text'>Using Raspberry Pi's to emit WiFi signals to devices in the room. Using the WiFi signals, generate a heat map of locations of people on a given floormap.</li>
+                                                <li className='modal-text'>Using Raspberry Pis to emit WiFi signals to devices in the room and generating a heat map of people’s locations on a given floor map.</li>
                                             </ul>
                                         <li className='modal-text'>Design and implement a cloud-based software system.</li>
                                     </ul>
@@ -227,7 +224,7 @@ function AboutPage(){
                                     <ul>
                                         <li className='modal-text'>Using PHP to build server-side web applications.</li>
                                         <li className='modal-text'>Learn to use SQL to store data.</li>
-                                        <li className='modal-text'>Understanding form processing, and using API's to interact with the server.</li>
+                                        <li className='modal-text'>Understanding form processing and using APIs to interact with the server.</li>
                                     </ul>
 
                                     <h2>Spring 2026 Classes Coming Soon!</h2>
